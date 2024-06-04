@@ -12,13 +12,25 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 class Solution {
 public:
     // 两数之和
     std::vector<int> twoSum(std::vector<int>& nums, int target);
 
-    // 其他问题的方法声明
+    // 两数相加
+    struct ListNode {
+       int val;
+       ListNode *next;
+       ListNode() : val(0), next(nullptr) {}
+       ListNode(int x) : val(x), next(nullptr) {}
+       ListNode(int x, ListNode *next) : val(x), next(next) {}
+    };
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+
+    // 无重复字符的最长子串
+    int lengthOfLongestSubstring(std::string s);
 };
 
 #endif // SOLUTION_H
